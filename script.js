@@ -11,3 +11,10 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
     alert("Registration successful");
   }
 });
+document.getElementById("addField").addEventListener("click", function () {
+  let form = document.getElementById("registerForm");
+  let extraInput = document.createElement("input");
+  extraInput.type = "text";
+  extraInput.placeholder = "Extra Field";
+  form.insertBefore(extraInput, form.querySelector("button[type='submit']"));
+});
